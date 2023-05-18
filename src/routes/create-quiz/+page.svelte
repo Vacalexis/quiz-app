@@ -1,9 +1,9 @@
 <script lang="ts">
-	import TextField, { Input } from '@smui/textfield';
+	import TextField from '@smui/textfield';
 	import Button, { Label } from '@smui/button';
 	import { createQuiz } from '../../services/quizService';
 	import { goto } from '$app/navigation';
-	import { Quiz } from '../../models/quiz';
+	import type { Quiz } from '../../models/quiz';
 
 	let quizName = '';
 
@@ -18,7 +18,6 @@
 </script>
 
 <TextField bind:value={quizName} label="Quiz Name">
-	<Input />
 </TextField>
 
 <Button on:click={handleCreateQuiz} variant="raised">
