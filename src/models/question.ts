@@ -1,3 +1,5 @@
+export type QuestionType = 'multipleChoide' | 'trueFalse';
+
 export interface Question {
 	id: string;
 	type: 'multipleChoice' | 'trueFalse';
