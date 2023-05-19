@@ -6,11 +6,11 @@
 <section>
 	<h1>Welcome to QuizApp!</h1>
 	<div>
-		<Button on:click={() => goto('/create-quiz')} variant="raised">
-			<Label>Create a Quiz</Label>
+		<Button on:click={() => goto('/create-questions')} variant="raised">
+			<Label>Create Questions</Label>
 		</Button>
-		<Button on:click={() => goto('/take-quiz')} variant="raised">
-			<Label>Take a Quiz</Label>
+		<Button on:click={() => goto('/respond-questions')} variant="raised">
+			<Label>Responder a perguntas</Label>
 		</Button>
 	</div>
 </section>
