@@ -6,7 +6,7 @@
 	import { createQuestion, getQuestions } from '../../services/questionService';
 	import { enhance } from '$app/forms';
 	import type { MultipleChoiceQuestion, Question } from '../../models/question';
-	import { goto } from '$app/navigation';
+	import { base } from '$app/paths';
 
 	let questions = getQuestions();
 
@@ -79,7 +79,7 @@
 		</div>
 	</div>
 </section>
-<Button on:click={() => goto('/')} variant="raised">
+<Button href="{base}" variant="raised">
     <Label>Back</Label>
 </Button>
 

@@ -4,7 +4,7 @@
 	import { arrayShuffle } from '../../services/utils';
 	import Card, { Content, PrimaryAction, Actions, ActionButtons, ActionIcons } from '@smui/card';
 	import Button, { Label } from '@smui/button';
-	import { goto } from '$app/navigation';
+	import { base } from '$app/paths';
 
 	const shuffledQuestions = arrayShuffle(getQuestions());
 	let currentIndex = 0;
@@ -56,15 +56,17 @@
 				</Actions>
 			</Card>
 		</div>
-		<Button on:click={nextQuestion}>
-			<Label>Próxima pergunta</Label>
-		</Button>
 	{:else}
 		<div>Não existem perguntas. Por favor adicionar.</div>
 	{/if}
-	<Button on:click={() => goto('/')} variant="raised">
+	<Button href={base} variant="raised">
 		<Label>Back</Label>
 	</Button>
+	{#if shuffledQuestions.length > 0}
+		<Button on:click={nextQuestion}>
+			<Label>Próxima pergunta</Label>
+		</Button>
+	{/if}
 </section>
 
 <style>
